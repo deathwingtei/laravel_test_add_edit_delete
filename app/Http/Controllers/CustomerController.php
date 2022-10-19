@@ -126,8 +126,8 @@ class CustomerController extends Controller
     
     public function delete($id)
     {
-        $delete = Department::onlyTrashed()->find($id)->forceDelete();
+        $delete = Customer::onlyTrashed()->find($id)->forceDelete();
 
-        return redirect()->route('department')->with('success','Force Delete');
+        return redirect()->route('customer')->with('success','Force Delete');
     }
 }
